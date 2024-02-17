@@ -18,15 +18,12 @@ console.log('#8. JavaScript homework example file')
  */
 
 function createDomElement(tagName, textContent, container) {
-  const element = document.createElement(tagName)
-  element.textContent = textContent
-  container.appendChild(element) // Додаємо елемент до заданого контейнера
-  return element // Повертаємо елемент для можливості перевірки в тестах
+  // code here
 }
 
 // Демонстрація використання функції
-const container = document.body // В якості прикладу використовуємо body як контейнер
-console.log(createDomElement('p', 'This paragraph has been added to the specified container.', container))
+// const container = document.body // В якості прикладу використовуємо body як контейнер
+// console.log(createDomElement('p', 'This paragraph has been added to the specified container.', container))
 
 /*
  * #2
@@ -44,12 +41,7 @@ console.log(createDomElement('p', 'This paragraph has been added to the specifie
  */
 
 function handleButtonClick(buttonId, message) {
-  const button = document.getElementById(buttonId)
-  if (button) {
-    button.addEventListener('click', () => {
-      console.log(message)
-    })
-  }
+  // code here
 }
 
 // Демонстрація використання функції (припустимо, що HTML містить кнопку з ID 'myButton')
@@ -72,10 +64,7 @@ function handleButtonClick(buttonId, message) {
 // setUserInfoCookie.js
 
 function setUserInfoCookie(key, value) {
-  const userInfo = `${key}=${value}`
-  const expires = new Date(Date.now() + 10000).toUTCString() // 10 секунд
-  document.cookie = `userInfo=${encodeURIComponent(userInfo)}; expires=${expires}; path=/`
-  console.log(`Cookie 'userInfo' set with value '${userInfo}' for 10 seconds`)
+  // code here
 }
 
 // Демонстрація використання функції
@@ -102,14 +91,11 @@ function setUserInfoCookie(key, value) {
  */
 
 function saveUserInfo(key, value) {
-  sessionStorage.setItem(key, value)
-  console.log(`Saved ${key}: ${value}`)
+  // code here
 }
 
 function getUserInfo(key) {
-  const value = sessionStorage.getItem(key)
-  console.log(`Retrieved ${key}: ${value}`)
-  return value
+  // code here
 }
 
 // Демонстрація використання функцій
