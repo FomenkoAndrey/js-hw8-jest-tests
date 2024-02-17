@@ -1,19 +1,16 @@
-import { handleButtonClick } from '../main'
+import { setUserInfoCookie } from '../main'
 
-describe('handleButtonClick', () => {
-  beforeEach(() => {
-    // Створення та додавання кнопки до DOM перед кожним тестом
-    document.body.innerHTML = '<button id="testButton">Click me</button>'
+describe('setUserInfoCookie', () => {
+  beforeAll(() => {
+    Object.defineProperty(window.document, 'cookie', {
+      writable: true,
+      value: ''
+    })
   })
 
-  test('logs the message to the console on button click', () => {
-    const consoleSpy = jest.spyOn(console, 'log')
-    handleButtonClick('testButton', 'Test message')
+  test('sets a userInfo cookie with useful information for 10 seconds', () => {
+    setUserInfoCookie('language', 'uk')
 
-    // Симулювання кліку на кнопку
-    document.getElementById('testButton').click()
-
-    expect(consoleSpy).toHaveBeenCalledWith('Test message')
-    consoleSpy.mockRestore()
+    expect(document.cookie).toContain('userInfo=language%3Duk')
   })
 })
