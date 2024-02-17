@@ -25,8 +25,8 @@ function createDomElement(tagName, textContent, container) {
 }
 
 // Демонстрація використання функції
-const container = document.body // В якості прикладу використовуємо body як контейнер
-console.log(createDomElement('p', 'This paragraph has been added to the specified container.', container))
+// const container = document.body // В якості прикладу використовуємо body як контейнер
+// console.log(createDomElement('p', 'This paragraph has been added to the specified container.', container))
 
 /*
  * #2
