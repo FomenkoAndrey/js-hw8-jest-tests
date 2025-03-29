@@ -1,4 +1,4 @@
-import { setUserInfoCookie } from '../main'
+import { setUserInfoCookie } from '../main.js'
 
 describe('setUserInfoCookie', () => {
   beforeAll(() => {
