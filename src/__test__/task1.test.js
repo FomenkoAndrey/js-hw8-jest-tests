@@ -1,4 +1,4 @@
-import { createDomElement } from '../main'
+import { createDomElement } from '../main.js'
 
 describe('createDomElement', () => {
   let container

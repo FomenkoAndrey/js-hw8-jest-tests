@@ -1,14 +1,14 @@
-import { getUserInfo, saveUserInfo } from '../main'
+import { getUserInfo, saveUserInfo } from '../main.js'
 
 describe('userSessionStorage', () => {
   beforeEach(() => {
     // Очистка sessionStorage перед кожним тестом
     sessionStorage.clear()
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   test('saves user information to sessionStorage', () => {
-    const consoleSpy = jest.spyOn(console, 'log')
+    const consoleSpy = vi.spyOn(console, 'log')
     saveUserInfo('role', 'admin')
 
     expect(sessionStorage.getItem('role')).toBe('admin')
@@ -17,7 +17,7 @@ describe('userSessionStorage', () => {
 
   test('retrieves user information from sessionStorage', () => {
     sessionStorage.setItem('role', 'admin') // Встановлення даних безпосередньо через sessionStorage для тесту
-    const consoleSpy = jest.spyOn(console, 'log')
+    const consoleSpy = vi.spyOn(console, 'log')
 
     const retrievedRole = getUserInfo('role')
 
